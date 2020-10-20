@@ -1,0 +1,37 @@
+inherit_gem:
+  citizens-advice-style:
+    - default.yml
+    - default-rails.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/queries/*'
+    - 'lib/load_tests/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/load_tests/*'
+    - 'features/0_factories/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'lib/load_tests/*'
+
+Style/MissingRespondToMissing:
+  Exclude:
+    - 'lib/load_tests/**/*'
+
+Naming/PredicateName:
+  Exclude:
+    - 'features/**/*'
+
+Rails/FilePath:
+  EnforcedStyle: 'slashes'
+
+# Pending cops
+AllCops:
+  NewCops: enable
